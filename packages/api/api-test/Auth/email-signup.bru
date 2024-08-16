@@ -1,0 +1,18 @@
+meta {
+  name: email-signup
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/api/v1/auth/email-sign-up
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "admin4@admin.com",
+    "password": "12345678"
+  }
+}

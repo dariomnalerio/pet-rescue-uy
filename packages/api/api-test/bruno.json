@@ -1,0 +1,25 @@
+{
+  "version": "1",
+  "name": "pet-rescue-uy",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ],
+  "presets": {
+    "requestType": "http",
+    "requestUrl": "http://localhost:3000/api/v1"
+  },
+  "proxy": {
+    "enabled": "global",
+    "protocol": "http",
+    "hostname": "localhost",
+    "port": 5174,
+    "auth": {
+      "enabled": false,
+      "username": "",
+      "password": ""
+    },
+    "bypassProxy": ""
+  }
+}

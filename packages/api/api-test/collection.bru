@@ -1,0 +1,19 @@
+script:pre-request {
+  const cookie = bru.getVar("cookie");
+  
+  console.log('pre-request: ', cookie)
+  
+  if(cookie) {
+    req.setHeader("cookie", cookie)
+  }
+}
+
+script:post-response {
+  const cookies = res.getHeader('set-cookie');
+  
+  console.log('post request: ', cookies)
+  
+  if(cookies) {
+    bru.setVar("cookie", cookies.join('; '));
+  }
+}

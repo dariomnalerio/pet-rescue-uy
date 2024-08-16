@@ -1,6 +1,6 @@
 import swaggerUi from 'swagger-ui-express';
 import { generateOpenApi } from '@ts-rest/open-api';
-import { contract } from 'contract';
+import contract from 'contract';
 
 const openApiDocument = generateOpenApi(contract, {
   info: {
