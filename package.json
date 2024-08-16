@@ -9,7 +9,10 @@
     "build": "lerna run build --parallel",
     "clean": "lerna clean --yes",
     "start-api": "lerna run start --scope api",
-    "dev-react": "lerna run dev --scope react-client"
+    "dev-api": "lerna run dev --scope api",
+    "dev-react": "lerna run dev --scope react-client",
+    "build-api": "lerna run build --scope api",
+    "build-contract": "lerna run build --scope contract"
   },
   "devDependencies": {
     "lerna": "^8.1.8",
