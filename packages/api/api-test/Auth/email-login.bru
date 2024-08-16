@@ -6,7 +6,7 @@ meta {
 
 post {
   url: http://localhost:3000/api/v1/auth/email-login
-  body: json
+  body: formUrlEncoded
   auth: none
 }
 
@@ -15,4 +15,14 @@ body:json {
     "email": "admin@admin.com",
     "password": "12345678"
   }
+}
+
+body:form-urlencoded {
+  email: {{email}}
+  password: {{password}}
+}
+
+vars:pre-request {
+  email: admin@admin.com
+  password: 12345678
 }
